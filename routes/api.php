@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\CrawlerController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return response()->json(['message' => "It's Works!"]);
-});
+Route::get('/', [CrawlerController::class, 'index']);
